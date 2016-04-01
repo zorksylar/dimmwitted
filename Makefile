@@ -39,6 +39,10 @@ lr: lr-help.o application/dw-lr-train.cpp application/dw-lr-test.cpp
 	$(CXX) $(CPP_FLAG) $(CPP_INCLUDE) application/dw-lr-train.cpp -o dw-lr-train lr-help.o $(CPP_LAST)
 	$(CXX) $(CPP_FLAG) $(CPP_INCLUDE) application/dw-lr-test.cpp -o dw-lr-test lr-help.o $(CPP_LAST)
 
+lr-core: lr-help.o application/dw-lr-train-core.cpp application/dw-lr-test.cpp
+	$(CXX) $(CPP_FLAG) $(CPP_INCLUDE) application/dw-lr-train-core.cpp -o dw-lr-train-core lr-help.o $(CPP_LAST)
+	$(CXX) $(CPP_FLAG) $(CPP_INCLUDE) application/dw-lr-test.cpp -o dw-lr-test lr-help.o $(CPP_LAST)
+
 lr-help.o: application/dw-lr-helper.cpp 
 	$(CXX) $(CPP_FLAG) $(CPP_INCLUDE) application/dw-lr-helper.cpp -c -o lr-help.o $(CPP_LAST)
 

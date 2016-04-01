@@ -71,7 +71,7 @@ int main(int argc, char ** argv){
     model.p[i] = 0.0;
   }
 
-  SparseDimmWitted<double, GLMModelExample_Sparse, DW_MODELREPL_PERMACHINE, DW_DATAREPL_SHARDING, DW_ACCESS_ROW> 
+  SparseDimmWitted<double, GLMModelExample_Sparse, DW_MODELREPL_PERCORE, DW_DATAREPL_SHARDING, DW_ACCESS_ROW> 
     dw(p_examples, p_rows, p_cols, n_examples, n_features+1, n_elements, &model);
 
   //dw.set_n_thread_per_node(2);
